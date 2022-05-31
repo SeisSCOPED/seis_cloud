@@ -1,6 +1,16 @@
 # Tools for Cloud Computing for seismology
 
 
+1. Tutorial to launch instances:
+* on AWS
+* on Azure
+
+
+2. Tutorials to deploy a jupyter hub:
+* on a Linux server
+* on AWS
+* on Azure 
+
 
 # Tutorial documentation and links:
 
