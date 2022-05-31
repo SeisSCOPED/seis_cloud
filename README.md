@@ -1,15 +1,21 @@
 # Tools for Cloud Computing for seismology
 
 
-1. Tutorial to launch instances:
-* on AWS
+1. Getting started on the cloud:
+* on AWS: get started, upload codes, save a virtual machine, re-start it. create storage locally, connect to S3 storage (download/upload).
 * on Azure
 
 
-2. Tutorials to deploy a jupyter hub:
+2. Deploying Containers
+
+
+3. Tutorials to deploy a jupyter hub:
 * on a Linux server
 * on AWS
 * on Azure 
+
+4. Scaling up computing on cloud
+* Kubernetes, Helm orchestration for aws and azure
 
 
 # Tutorial documentation and links:
