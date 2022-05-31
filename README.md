@@ -1,1 +1,1 @@
-# seis_cloud
+# Tools for Cloud Computing for seismology
