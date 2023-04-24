@@ -29,7 +29,7 @@ st=client.get_waveforms(network=net,station=sta,location=loc,channel=chan,\
 #We save the data into a CSV file that we will download.
 
 st.filter('bandpass',freqmin=fmin,freqmax=fmax)
-plt.plot(st[0].times,st[0].data)
+plt.plot(st[0].times(),st[0].data)
 plt.savefig('test.png')
 
 # get the maximum value in that frequency band
