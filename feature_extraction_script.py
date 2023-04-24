@@ -31,11 +31,12 @@ st.filter('bandpass',freqmin=fmin,freqmax=fmax)
 # get the maximum value in that frequency band
 Amax=np.max(np.abs(st[0].data))
 imax = np.argmax(np.abs(st[0].data))
-Amaxt = st[0].times(types='utcdatetime')[imax]
+Amaxt = st[0].times(type='utcdatetime')[imax]
 print(Amax,Amaxt)
+
+
+
 # 2. Fourier Transform
-
-
 npts = st[0].stats.npts
 ## FFT the signals
 # fill up until 2^N value to speed up the FFT
@@ -57,6 +58,8 @@ print(Fmax)
 
 D = {'network':net,'station':sta,'channel':chan,'location':loc,\
      'freqmin':fmin,'freqmax':fmax,'date':Amaxt,'Fmax':Fmax}
+print(Amaxt)
+
 
 df=pd.DataFrame.from_dict(D)
 df.to_csv('features.csv')
