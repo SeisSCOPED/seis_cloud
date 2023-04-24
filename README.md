@@ -1,22 +1,11 @@
-# Tools for Cloud Computing for seismology
+# Cloud Computing for seismology 101
 
+This repository is a minimum seismo-code to run on the cloud.
 
-1. Getting started on the cloud:
-* on AWS: get started, upload codes, save a virtual machine, re-start it. create storage locally, connect to S3 storage (download/upload).
-* on Azure
-
-
-2. Deploying Containers
-
-
-3. Tutorials to deploy a jupyter hub:
-* on a Linux server
-* on AWS
-* on Azure 
-
-4. Scaling up computing on cloud
-* Kubernetes, Helm orchestration for aws and azure
-
+## Installation
+```$ conda create -n seiscloud python=3.8 pip
+$ conda activate seiscloud
+$ pip install -r requirements.txt```
 
 # Tutorial documentation and links:
 
