@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import date
 import pandas as pd
 from scipy.fftpack import fft, fftfreq, next_fast_len
 
@@ -11,7 +12,8 @@ net = "CI"
 sta = "RIO"
 chan = "HHZ"
 loc ="*"
-t0 = obspy.UTCDateTime("2022-01-01")
+day = "2022-01-01"
+t0 = obspy.UTCDateTime(day)
 fmin = 0.1  # m
 fmax = 10   # maximum frequency band
 
@@ -31,7 +33,7 @@ st.filter('bandpass',freqmin=fmin,freqmax=fmax)
 # get the maximum value in that frequency band
 Amax=np.max(np.abs(st[0].data))
 imax = np.argmax(np.abs(st[0].data))
-Amaxt = st[0].times(type='utcdatetime')[imax]
+Amaxt = st[0].times(type='timestamp')[imax] # this is timestamps since POSIX time (197-,1,1).
 print(Amax,Amaxt)
 
 
@@ -57,7 +59,8 @@ Fmax = imax*st[0].stats.sampling_rate/2/Nfft
 print(Fmax)
 
 D = {'network':net,'station':sta,'channel':chan,'location':loc,\
-     'freqmin':fmin,'freqmax':fmax,'date':Amaxt,'Fmax':Fmax}
+     'freqmin':[fmin],'freqmax':[fmax],'date':[Amaxt],'Fmax':[Fmax]}
+print(D)
 print(Amaxt)
 
 
