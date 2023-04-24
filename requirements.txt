@@ -1,5 +1,8 @@
 obspy
 pandas
+numpy
+datetime
 matplotlib
 fsspec
 ipykernel
+notebook
