@@ -4,7 +4,7 @@ This repository is a minimum seismo-code to run on the cloud.
 
 ## Installation
 ```bash
-$ conda create -n seiscloud python=3.8 pip
+$ conda create -y -n seiscloud python=3.8 pip
 $ conda activate seiscloud
 $ pip install -r requirements.txt
 ```
