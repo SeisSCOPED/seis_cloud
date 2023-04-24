@@ -2,3 +2,4 @@ obspy
 pandas
 matplotlib
 fsspec
+ipykernel
