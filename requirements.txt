@@ -6,3 +6,4 @@ matplotlib
 fsspec
 ipykernel
 notebook
+boto3
