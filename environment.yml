@@ -1,0 +1,16 @@
+name: seiscloud
+channels:
+  - conda-forge
+dependencies:
+  - mpi4py
+  - obspy
+  - pip
+  - python=3.7
+  - pip:
+    - pandas
+    - numpy
+    - datetime
+    - matplotlib
+    - fsspec
+    - jupyter
+    - boto3
