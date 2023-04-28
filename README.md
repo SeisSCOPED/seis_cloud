@@ -11,13 +11,20 @@ conda activate seiscloud
 pip install -r requirements.txt
 ```
 
-You can also use ``Docker`` using the following commands:
-
-
-__Warnings__: Right now the Dockerfile does not do anything ;-)
+You can also use ``Docker`` using the following commands. First pull the image using,
 ```bash
 docker pull ghcr.io/seisscoped/seis_cloud:latest
-docker run -v ${pwd}:/tmp -p 8888:8888 ghcr.io/seisscoped/seis_cloud:latest
+```
+To use Docker to run one script within the image in a single command line, you can type:
+```bash
+docker run -v ${pwd}:/tmp -p 8888:8888 ghcr.io/seisscoped/seis_cloud:latest python feature_extraction_scedc_script.py
+```
+where the ``-v ${pwd}:/tmp`` option mounts a local drive, ``-p 8888:8888`` will allow to open the jupyter notebook in a local port.
+
+
+To run interactively and be prompted to the repository with the files, run:
+```bash
+docker run -it ghcr.io/seisscoped/seis_cloud:latest
 ```
 
 
