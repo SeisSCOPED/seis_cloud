@@ -40,7 +40,7 @@ Getting on a AWS Instance in the [HPS JupyterBook](https://seisscoped.org/HPS/so
 You can run a python scripts on the terminal interface of the instance by simply installing the packages (tutorials listed above):
 
 ```bash
-python feature_extraction_script.py
+python feature_extraction_scedc_script.py
 ```
 
 You can also open a jupyter notebook and run the notebooks. Use the tutorials listed above and use ``feature_extraction_scedc_script.ipynb``.
